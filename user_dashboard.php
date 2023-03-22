@@ -1,0 +1,73 @@
+<?php
+   session_start();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $("#create_task").click(function(){
+            $("#left_sidebar").load("task.php");
+        });
+      });
+
+   
+
+
+
+    </script>
+</head>
+<body>
+
+  <div class="row">
+  <div class="col-lg-6" id="right_sidebar">
+  <h4>Attechx Management System</h4>
+  <table class="table">
+    <tr>
+        <td><a href="user_dashboard.php" type="button">Dashboard</td>
+    </tr>
+    <tr>
+        <td><a id="create_task" type="button" >Update Task</td>
+    </tr>
+ 
+    <tr>
+        <td><a href="user_dashboard.php" >Apply Leave</td>
+    </tr>
+    <tr>
+        <td><a href="user_dashboard.php" >Leave Status</td>
+    </tr>
+    <tr>
+        <td><a href="logout.php" >Log Out</td>
+    </tr>
+    </table>
+
+  </div>
+  <div class="col-lg-6 m-auto"  id="left_sidebar">
+  <h4>Attechx Management System</h4><br>
+  <h5>Hi <?php echo $_SESSION['name'];?>  </h5><br>
+  <h5>Instruction for Employees</h5><br>
+  <ul>
+    <li>Lorem ipsum </li>
+    <li>Lorem ipsum </li>
+    <li>Lorem ipsum </li>
+    <li>Lorem ipsum </li>
+  </div>
+
+ </div>
+
+</body>
+</html>
