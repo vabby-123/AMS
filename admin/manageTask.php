@@ -1,7 +1,7 @@
 <html>
-    <body>
+        <body>
         <h3>All assigned tasks</h3>
-        <table class="table">
+        <table class="table  table-striped"  style="background-color:white;">
             <tr>
                 <th>S.No</th>
                 <th>Task ID</th>

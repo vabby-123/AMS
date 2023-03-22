@@ -17,13 +17,13 @@
   integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
   crossorigin="anonymous"></script>
 </head>
-<body>
-   <h3>Your tasks</h3>
-   <table class="table">
+<body >
+   <h3 class="text-center">Your tasks</h3>
+   <table class="table table-striped" style="background-color:white;">
             <tr>
                 <th>S.No</th>
                 <th>Task ID</th>
-                <th>Description</th>
+                <th>Your User ID</th>
                 <th>Description</th>
                 <th>Start Date</th>
                 <th>End Date</th>

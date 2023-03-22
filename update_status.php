@@ -43,7 +43,7 @@ if(isset($_POST['update'])){
   integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
   crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color:#fcde67">
 <div class="row">
     <div class="col-md-6">
     <h3> Update the task</h3>
@@ -66,7 +66,7 @@ if(isset($_POST['update'])){
                    
                 </select>
                
-                <input type="submit" class="btn btn-primary" name="update" value="Update" />
+                <input type="submit" class="btn btn-dark text-center" name="update" value="Update" />
 
 
            </form>
