@@ -16,6 +16,7 @@
   src="https://code.jquery.com/jquery-3.6.4.js"
   integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
   crossorigin="anonymous"></script>
+
 </head>
 <body >
    <h3 class="text-center">Your tasks</h3>
@@ -28,7 +29,10 @@
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Status</th>
+                <th>Start Time</th>
+                <th>End Time</th>
                 <th>Action</th>
+                
             </tr>
             <?php
              $sno=1;
@@ -46,7 +50,11 @@
                 <td><?php echo $row['start_date']; ?></td>
                 <td><?php echo $row['end_date']; ?></td>
                 <td><?php echo $row['status']; ?></td>
-                <td><a href="update_status.php?id=<?php echo $row['tid'];?>">Update</td>
+                <td><?php echo $row['start_time']; ?></td>
+                <td><?php echo $row['end_time']; ?></td>
+                
+                <td><a href="update_status.php?id=<?php echo $row['tid'];?>" value="id">Update</td>
+                
              
             </tr>
 

@@ -2,12 +2,15 @@
 
 include('includes/connection.php');
 if(isset($_POST['update'])){
-    $query="update tasks set status='$_POST[status]' where tid= $_GET[id]";
+  
+    $query="update tasks set status='$_POST[status]' where tid= '$_GET[id]'";
     $query_run=mysqli_query($connection,$query);
+    
+ 
     if($query_run){
         echo "<script type='text/javascript'>
-        alert('Status updated successfully..');
-        window.location.href='user_dashboard.php';
+        alert('Status updated successfully');
+       
         </script>";
         
 
@@ -21,6 +24,49 @@ if(isset($_POST['update'])){
 
     }
 }
+date_default_timezone_set('Asia/Kolkata');
+$t=date('h:i:s');
+if(isset($_POST['clock-in'])){
+  $query1="update tasks set start_time='$t' where tid= $_GET[id]";
+  $query_run1=mysqli_query($connection,$query1);
+  if($query_run1){
+     echo "<script type='text/javascript'>
+     alert('Time In Updated');
+     window.location.href='user_dashboard.php';
+     </script>";
+  }
+  else{
+
+     echo "<script type='text/javacript'>
+     alert('Error..Please try again');
+     window.location.href='user_dashboard.php';
+     </script>";
+
+ }
+}
+
+date_default_timezone_set('Asia/Kolkata');
+$t=date('h:i:s');
+if(isset($_POST['clock-out'])){
+  $query1="update tasks set end_time='$t' where tid= $_GET[id]";
+  $query_run1=mysqli_query($connection,$query1);
+  if($query_run1){
+     echo "<script type='text/javascript'>
+     alert('Time Out Updated');
+     window.location.href='user_dashboard.php';
+     
+     </script>";
+  }
+  else{
+
+     echo "<script type='text/javacript'>
+     alert('Error..Please try again');
+     window.location.href='user_dashboard.php';
+     </script>";
+
+ }
+}
+
 
 ?>
 
@@ -42,22 +88,29 @@ if(isset($_POST['update'])){
   src="https://code.jquery.com/jquery-3.6.4.js"
   integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
   crossorigin="anonymous"></script>
+  <!-- <script>
+       $(document).ready(function(){
+        $("#update").click(function(){
+          $("#clock").css("visibility", "visible");
+        });
+       })
+    </script> -->
 </head>
 <body style="background-color:#fcde67">
 <div class="row">
     <div class="col-md-6">
     <h3> Update the task</h3>
     <?php 
-    include('includes/connection.php');
-    $query= "select * from tasks where tid=$_GET[id]";
-    $query_run=mysqli_query($connection,$query);
-    while($row=mysqli_fetch_assoc($query_run)){
+    if(isset($_GET['id'])){
+    $query1= "select * from tasks where tid='$_GET[id]'";
+    $query_run1=mysqli_query($connection,$query1);
+    while($row=mysqli_fetch_assoc($query_run1)){
     ?>
 
    
         <form action="" method="post">
         <div class="form-group">
-                <input type="hidden" name="id" class="form-control" value="" required>
+                <input type="hidden" name="id" class="form-control" value="id" required>
             <div class="form-group">
                 <select class="form-control" name="status">
                     <option>-Select-</option>
@@ -66,12 +119,16 @@ if(isset($_POST['update'])){
                    
                 </select>
                
-                <input type="submit" class="btn btn-dark text-center" name="update" value="Update" />
-
-
+                <input type="submit" class="btn btn-dark text-center update" name="update" id="update" value="Update" />
+                <hr>
+                <div  id="clock">
+                <input  type="submit" class="btn btn-dark text-center" name="clock-in" id="clock" value="Clock IN" />
+                <input  type="submit" class="btn btn-dark text-center" name="clock-out"  value="Clock OUT" />
+                </div>
            </form>
            <?php
            }
+        }
            ?>
        </div>
  </div>

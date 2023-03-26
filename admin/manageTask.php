@@ -5,11 +5,14 @@
             <tr>
                 <th>S.No</th>
                 <th>Task ID</th>
-                <th>Assigned User ID</th>
+                <th>Assigned User</th>
                 <th>Description</th>
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Status</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+
                 <th>Action</th>
             </tr>
             <?php
@@ -22,10 +25,12 @@
                 <tr>
                 <td><?php echo $sno; ?></td>
                 <td><?php echo $row['tid']; ?></td>
-                <td><?php echo $row['uid']; ?></td>
+                <td><?php echo $row['Assigned To']; ?></td>
                 <td><?php echo $row['description']; ?></td>
                 <td><?php echo $row['start_date']; ?></td>
                 <td><?php echo $row['end_date']; ?></td>
+                <td><?php echo $row['start_time']; ?></td>
+                <td><?php echo $row['end_time']; ?></td>
                 <td><?php echo $row['status']; ?></td>
                 <td><a href="edit_task.php?id=<?php echo $row['tid']; ?>">Edit</a>|<a href="delete_task.php?id=<?php echo $row['tid']; ?>">Delete</a></td>
             </tr>

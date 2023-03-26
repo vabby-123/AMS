@@ -21,7 +21,7 @@
         <form action="" method="post">
             <div class="form-group">
                 <label>Select User: </label>
-                <select class="form-control" name="id">
+                <select class="form-control" name="name">
                     <option>-Select-</option>
                     <?php
                       include('../includes/connection.php');

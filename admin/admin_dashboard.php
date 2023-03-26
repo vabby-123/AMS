@@ -2,7 +2,7 @@
 include('../includes/connection.php');
 if(isset($_POST['create_task']))
 {   
-      $query="insert into tasks values(null, '$_POST[id]','$_POST[description]','$_POST[start_date]','$_POST[end_date]','Not Started')";
+      $query="insert into tasks values(null, '$_POST[name]','$_POST[name]','$_POST[description]','$_POST[start_date]','$_POST[end_date]','Not Started','00:00:00','00:00:00')";
     $query_run=mysqli_query($connection,$query);
 
 if($query_run){
@@ -90,7 +90,7 @@ if($query_run){
     </tr>
  
     <tr>
-        <td><a  id="manage_task" type="button" style="text-decoration:none; color:white">Manage Task</td>
+        <td><a id="manage_task" type="button" style="text-decoration:none; color:white">Manage Task</td>
     </tr>
     <tr>
         <td><a href="show_leave.php" id="view_leave" style="text-decoration:none; color:white" >Leave Applications</td>
