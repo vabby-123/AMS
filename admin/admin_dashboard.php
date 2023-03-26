@@ -93,7 +93,7 @@ if($query_run){
         <td><a  id="manage_task" type="button" style="text-decoration:none; color:white">Manage Task</td>
     </tr>
     <tr>
-        <td><a href="user_dashboard.php" id="view_leave" style="text-decoration:none; color:white" >Leave Applications</td>
+        <td><a href="show_leave.php" id="view_leave" style="text-decoration:none; color:white" >Leave Applications</td>
     </tr>
     <tr>
         <td><a href="../logout.php" id="view_leave" style="text-decoration:none; color:red" >Log Out</td>

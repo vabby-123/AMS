@@ -45,10 +45,10 @@
     </tr>
  
     <tr>
-        <td><a href="user_dashboard.php" type="button" style="text-decoration:none; color:white" >Apply Leave</td>
+        <td><a href="leave.php" type="button" style="text-decoration:none; color:white" >Apply Leave</td>
     </tr>
     <tr>
-        <td><a href="user_dashboard.php" style="text-decoration:none; color:white" >Leave Status</td>
+        <td><a href="leave_status.php" style="text-decoration:none; color:white" >Leave Status</td>
     </tr>
     <tr>
         <td><a href="logout.php"style="text-decoration:none; color:red" >Log Out</td>
