@@ -1,5 +1,5 @@
 # AMS
-An employee management system built for an organization.
+An employee management system built for an organization. </br>
 It has employee panel as well as admin panel.
 It consist of features such as assigning task, leave status and many more.
 
@@ -13,7 +13,7 @@ It consist of features such as assigning task, leave status and many more.
 4- Start the Apache Server and Mysql server.
 5- Open the server on  your browser and then you are all set to go.
 
-#Credentials
+# Credentials
 
 Username- abcd
 Password- 12345678
