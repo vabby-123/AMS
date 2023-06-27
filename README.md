@@ -1,19 +1,19 @@
 # AMS
 An employee management system built for an organization. </br>
-It has employee panel as well as admin panel.
-It consist of features such as assigning task, leave status and many more.
+It has employee panel as well as admin panel. </br>
+It consist of features such as assigning task, leave status and many more. </br>
 
-# How to run?
+# How to run? </br>
 
-# In localhost
+# In localhost </br>
 
-1- Commit the repository and unzip it.
-2- Download Xammp Control Panel, and then move the unzipped folder in htdocs folder which is located in Xammp server folder. Search for it using search bar.
-3- Migrate the .sql database file in your database mysql server (phpMyAdmin).
-4- Start the Apache Server and Mysql server.
-5- Open the server on  your browser and then you are all set to go.
+1- Commit the repository and unzip it. </br>
+2- Download Xammp Control Panel, and then move the unzipped folder in htdocs folder which is located in Xammp server folder. Search for it using search bar. </br>
+3- Migrate the .sql database file in your database mysql server (phpMyAdmin). </br>
+4- Start the Apache Server and Mysql server. </br>
+5- Open the server on  your browser and then you are all set to go. </br>
 
-# Credentials
+# Credentials </br>
 
-Username- abcd
-Password- 12345678
+Username- abcd </br>
+Password- 12345678 </br>
